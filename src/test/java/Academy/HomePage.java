@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class HomePage extends Base {
@@ -33,4 +34,9 @@ public class HomePage extends Base {
 		//driver.close();
 	}
 
+	@AfterTest
+	public void Close() {
+		driver.close();
+		System.out.println("This is the updated code");
+	}
 }

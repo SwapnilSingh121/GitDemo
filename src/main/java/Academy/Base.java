@@ -20,7 +20,8 @@ public class Base {
 	public WebDriver initializeDriver() throws IOException {
 		
 		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\swapn\\eclipse-workspaceNew\\FACEBOOK\\src\\main\\java\\Academy\\data.properties");
+		FileInputStream fis=new FileInputStream(
+				System.getProperty("user.dir")+"\\src\\main\\java\\Academy\\data.properties");
 		prop.load(fis);
 		String browserName=prop.getProperty("browser");
 		
